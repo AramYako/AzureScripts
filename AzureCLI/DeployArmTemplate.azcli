@@ -1,0 +1,10 @@
+
+$rgName ="rg-demo"
+$templateFile = storage.json
+$paramterFile = @storage.parameters.json
+
+az deployment group create \
+  --name ExampleDeployment 
+  --resource-group $rgName 
+  --template-file $templateFile
+  --parameters $paramterFile
