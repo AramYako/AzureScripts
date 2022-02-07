@@ -7,7 +7,9 @@ $rgName ="rg-demo"
 $app_plan = "demo-plan-free"; 
 $web_app_name = "demo-app"
 
-az account set --subscription "30fc6e6c-1179-4f9d-a855-422aaa9a319a"
+$subscriptionId = ""
+
+az account set --subscription $subscriptionId
 
 #Create resource group
 az group create --name $rgName --location $rg_location

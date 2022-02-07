@@ -3,13 +3,14 @@ $rgName ="rg-demo-pw"
 $app_plan = "demo-plan-free-pw"; 
 $web_app_name = "demo-app$(Get-Random)"
 
+$subscriptionId = ""; 
 
 #Login
 Connect-AzAccount
 
 
 #Set subscription
-Set-AzContext -Subscription "30fc6e6c-1179-4f9d-a855-422aaa9a319a"
+Set-AzContext -Subscription $subscriptionId
 
 #Create resource-group
 New-AzResourceGroup -Name $rgName -Location $rg_location
